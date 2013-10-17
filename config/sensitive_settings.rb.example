@@ -1,0 +1,22 @@
+module SensitiveSettings
+	class << self
+		def session_secret
+			'feb5ac1fe36b4f79f974a1d243d6288447bd6b1694d9a5d60589291610356de7'
+		end
+
+		def database(env)
+			case env
+				when :development then ({ :adapter => 'postgres', :database  => 'prive', :password => "password", :username  => 'postgres', :port => 5432 })
+				when :production then ({ :adapter => 'postgres', :database  => 'prive', :username  => 'prive', :port => 5432 })
+			end
+		end
+
+		def openfire_userapi_secret
+			'87W2I5y5'
+		end
+
+		def openfire_url
+			"http://localhost:9090/"
+		end
+	end
+end
