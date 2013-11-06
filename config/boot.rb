@@ -34,7 +34,8 @@ Bundler.require(:default, PADRINO_ENV)
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
-	require Padrino.root('config/extensions/string')
+  require Padrino.root('lib/extensions/string')
+  require Padrino.root('lib/authorization')
 end
 
 ##

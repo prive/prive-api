@@ -24,8 +24,6 @@ gem 'sequel'
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.4'
-
-gem "openfire_api", :git => "git://github.com/paulasmuth/openfire_api.git"
 gem 'capistrano', '~> 2.15'
 
 # Or Padrino Edge

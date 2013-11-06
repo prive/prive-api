@@ -26,6 +26,7 @@
 # override these settings in the subapps as needed.
 #
 require Padrino.root('config/sensitive_settings.rb')
+require Padrino.root('app/exceptions.rb')
 
 Padrino.configure_apps do
   # enable :sessions
