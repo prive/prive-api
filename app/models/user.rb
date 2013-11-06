@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class User < AbstractModel
   UPDATE_ATTRIBUTES = [ :nickname ]
   CREATE_ATTRIBUTES = [ :encrypted_tor_id ]
@@ -28,7 +30,8 @@ class User < AbstractModel
     end
 
     def new_api_key
-      rand(36**255).to_s(36)
+      SecureRandom.hex(36)
+      # rand(36**255).to_s(36)
     end
   end
 end
